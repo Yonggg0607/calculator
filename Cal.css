@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: 'EKKFont'; /* Choose the name you want for your font */
+    src: url('Lightes.otf') format('opentype'); /* Path to the .otf file */
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for the background video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire screen */
+    z-index: -1; 
+    border-radius: 10px;/* Places the video behind other content */
+}
+
+/* Style for the calculator */
+.calculator {
+    width: 323px;
+    background-color: rgba(237, 227, 227, 0.8); /* Slight transparency */
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Display area of the calculator */
+input {
+    width: 100%;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    font-family:'EKKCustom', Courier, monospace;
+    font-weight: bolder ;
+    width: 267px;
+}
+
+/* Grid layout for buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+}
+
+/* Styling buttons */
+button {
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    border-radius: 360px;
+    cursor: pointer;
+    background-color: #e470b2;
+    transition: background-color 0.3s;
+    font-family:'EKKCustom', Courier, monospace;
+    font-weight: bolder ;
+}
+
+button:hover {
+    background-color: #e1e1e1;
+}
+
+button:active {
+    background-color: #faf8f8;
+}
+
+.operator {
+    background-color: #fefcf9;
+    color: rgb(5, 5, 5);
+}
+
+.operator:hover {
+    background-color: #ff7f00;
+}
